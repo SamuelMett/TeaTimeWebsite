@@ -1,0 +1,129 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #faf4ed;
+    color: #3e3e3e;
+    line-height: 1.6;
+  }
+  
+  /* HEADER */
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 2rem;
+    background-color: #fff;
+    border-bottom: 1px solid #e0dcd2;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  
+  .logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #b08968; /* Mocha accent */
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+  }
+  
+  nav ul li a {
+    text-decoration: none;
+    color: #3e3e3e;
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+  
+  nav ul li a:hover {
+    color: #b08968;
+  }
+  
+  /* HERO */
+  .hero {
+    text-align: center;
+    padding: 6rem 2rem 4rem;
+    background-color: #fff;
+  }
+  
+  .hero h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #3e3e3e;
+  }
+  
+  .hero p {
+    font-size: 1.2rem;
+    color: #6f4e37;
+  }
+  
+  /* FEATURED MENU */
+  .featured-menu {
+    padding: 4rem 2rem;
+    text-align: center;
+  }
+  
+  .featured-menu h2 {
+    font-size: 2rem;
+    margin-bottom: 2.5rem;
+    color: #b08968;
+  }
+  
+  .menu-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+  }
+  
+  .menu-item {
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 12px;
+    max-width: 220px;
+    box-shadow: 0 4px 12px rgba(111, 78, 55, 0.1); /* coffee shadow */
+    transition: transform 0.3s ease;
+  }
+  
+  .menu-item:hover {
+    transform: translateY(-5px);
+  }
+  
+  .menu-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+  
+  .menu-item h3 {
+    margin-top: 1rem;
+    font-size: 1.1rem;
+    color: #3e3e3e;
+  }
+  
+  .menu-item p {
+    color: #6f4e37;
+    font-size: 0.95rem;
+    margin-top: 0.4rem;
+  }
+  
+  /* FOOTER */
+  footer {
+    text-align: center;
+    padding: 1.5rem 1rem;
+    background-color: #fff;
+    border-top: 1px solid #e0dcd2;
+    font-size: 0.9rem;
+    color: #6f4e37;
+    margin-top: 2rem;
+  }
+  
