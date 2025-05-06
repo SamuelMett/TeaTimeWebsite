@@ -27,7 +27,7 @@
   .logo {
     font-size: 1.8rem;
     font-weight: bold;
-    color: #b08968; /* Mocha accent */
+    color: #b08968; 
   }
   
   nav ul {
@@ -90,7 +90,7 @@
     padding: 1rem;
     border-radius: 12px;
     max-width: 220px;
-    box-shadow: 0 4px 12px rgba(111, 78, 55, 0.1); /* coffee shadow */
+    box-shadow: 0 4px 12px rgba(111, 78, 55, 0.1); 
     transition: transform 0.3s ease;
   }
   

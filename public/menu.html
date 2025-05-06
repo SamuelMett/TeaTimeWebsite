@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Menu | TeaTime</title>
+  <link rel="stylesheet" href="styles/menu.css" />
+</head>
+<body>
+  <div class="menu-container">
+    <h1>Our Menu</h1>
+
+    <div class="tabs">
+      <button onclick="showTab('coffee')">Coffee & Tea</button>
+      <button onclick="showTab('smoothies')">Smoothies</button>
+      <button onclick="showTab('bubbletea')">Fresh Tea</button>
+      <button onclick="showTab('soda')">Italian Soda</button>
+      <button onclick="showTab('milktea')">Milk Tea</button>
+      <button onclick="showTab('milkshake')">Milkshake</button>
+    </div>
+
+    <div class="tab-content" id="coffee">
+      <h2>All Day – Coffee & Tea</h2>
+      <div class="menu-item">
+        <div>
+          <strong>Hot Black Tea (Plain)</strong>
+        </div>
+        <span>$2.00</span>
+      </div>
+      <div class="menu-item">
+        <div>
+          <strong>Hot Chocolate</strong><br />
+          <small>Smooth, rich chocolate drink, perfectly steamed to warm your soul.</small>
+        </div>
+        <span>$3.50</span>
+      </div>
+      <div class="menu-item">
+        <div><strong>Hot Coffee (Plain)</strong></div>
+        <span>$3.00</span>
+      </div>
+      <div class="menu-item">
+        <div><strong>Hot Green Tea (Plain)</strong></div>
+        <span>$2.00</span>
+      </div>
+      <div class="menu-item">
+        <div>
+          <strong>Sweet Tea</strong><br />
+          <small>Refreshing sweet tea brewed to perfection.</small>
+        </div>
+        <span>$2.00</span>
+      </div>
+      <div class="menu-item">
+        <div>
+          <strong>Unsweet Tea</strong><br />
+          <small>Refreshing, chilled classic tea with no added sweetness.</small>
+        </div>
+        <span>$2.00</span>
+      </div>
+    </div>
+
+    <div class="tab-content" id="smoothies" style="display:none;">
+      <h2>All Day – Smoothies</h2>
+      <p>Coming soon...</p>
+    </div>
+
+    <div class="tab-content" id="bubbletea" style="display:none;">
+      <h2>All Day – Bubble Tea</h2>
+      <p>Coming soon...</p>
+    </div>
+
+    <div class="tab-content" id="soda" style="display:none;">
+      <h2>All Day – Italian Soda</h2>
+      <p>Coming soon...</p>
+    </div>
+
+    <div class="tab-content" id="milktea" style="display:none;">
+      <h2>All Day – Milk Tea</h2>
+      <p>Coming soon...</p>
+    </div>
+
+    <div class="tab-content" id="milkshake" style="display:none;">
+      <h2>All Day – Milkshake</h2>
+      <p>Coming soon...</p>
+    </div>
+  </div>
+
+  <script>
+    function showTab(id) {
+      const tabs = document.querySelectorAll('.tab-content');
+      tabs.forEach(tab => tab.style.display = 'none');
+      document.getElementById(id).style.display = 'block';
+    }
+  </script>
+</body>
+</html>
