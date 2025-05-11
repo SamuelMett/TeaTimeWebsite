@@ -13,9 +13,10 @@
     <nav>
       <ul>
         <li><a href="index.html">Home</a></li>
-        <li><a href="index.html">About Us</a></li>
+        <!--<li><a href="index.html">About Us</a></li>-->
         <li><a href="menu.html">Menu</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="#" class="modal-trigger" data-modal="aboutModal">About </a></li>
+        <li><a href="#" class="modal-trigger" data-modal="contactModal">Contact</a></li>
       </ul>
     </nav>
   </header>
@@ -24,7 +25,7 @@
   <section class="hero-section">
     <div class="hero-text">
       <h1>Welcome to TeaTime Café</h1>
-      <p>Serving up the best milk tea and snacks in town.</p>
+      <p>Serving up the best milk tea in town.</p>
     </div>
   </section>
   
@@ -55,5 +56,67 @@
   <footer>
     <p>&copy; 2025 1822 W Thomas St | Hammond, LA 70401 | (985) 415-7119</p>
   </footer>
+
+  <!-- About Us Modal -->
+  <div id="aboutModal" class="modal">
+    <div class="modal-content">
+      <span class="close" data-modal="aboutModal">&times;</span>
+      <h2>About TeaTime Café</h2>
+      <p>
+        TeaTime Café has been serving up quality beverages and snacks with passion.
+        Our mission is to deliver a relaxed and upscale environment where you can
+        enjoy the best milk tea in town.
+      </p>
+      <h3>Store Hours</h3>
+      <ul>
+        <li>Monday - Saturday: 10 AM –  7 PM</li>
+        <li>Sunday: 12 PM – 7 PM</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Contact Modal -->
+  <div id="contactModal" class="modal">
+    <div class="modal-content">
+      <span class="close" data-modal="contactModal">&times;</span>
+      <h2>Contact TeaTime Café</h2>
+      <p>Please reach out to us at:</p>
+      <p>Email: contact@teatimecafe.com</p>
+      <p>Phone: (985) 415-7119</p>
+      <!-- Alternatively, you can add a contact form here -->
+    </div>
+  </div>
+
+  <!-- JavaScript for Modal Functionality -->
+  <script>
+    // Get all modal triggers (buttons) and close elements
+    const modalTriggers = document.querySelectorAll('.modal-trigger');
+    const closeButtons = document.querySelectorAll('.close');
+
+    // Function to open a modal
+    modalTriggers.forEach(trigger => {
+      trigger.addEventListener('click', () => {
+        const modalId = trigger.getAttribute('data-modal');
+        document.getElementById(modalId).style.display = 'block';
+      });
+    });
+
+    // Function to close a modal
+    closeButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const modalId = btn.getAttribute('data-modal');
+        document.getElementById(modalId).style.display = 'none';
+      });
+    });
+
+    // Close modal if clicking outside of modal-content
+    window.addEventListener('click', (e) => {
+      document.querySelectorAll('.modal').forEach(modal => {
+        if(e.target === modal) {
+          modal.style.display = 'none';
+        }
+      });
+    });
+  </script>
 </body>
 </html>

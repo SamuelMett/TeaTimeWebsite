@@ -197,3 +197,88 @@
     }
   }
   
+
+  /* ===================== */
+/* MODAL STYLES - ABOUT & CONTACT */
+/* ===================== */
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 2000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5); /* dimmed background */
+  backdrop-filter: blur(4px);
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: 10% auto;
+  padding: 2rem;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 600px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+  position: relative;
+  color: #3e3e3e;
+  animation: fadeInUp 0.4s ease;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.modal-content h2 {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  color: #b08968;
+}
+
+.modal-content ul {
+  margin-top: 0.8rem;
+  padding-left: 1.2rem;
+}
+
+.modal-content p {
+  margin-bottom: 1rem;
+  color: #3e3e3e;
+  line-height: 1.5;
+}
+
+/* Close Button */
+.close {
+  position: absolute;
+  top: 1rem;
+  right: 1.2rem;
+  font-size: 1.8rem;
+  color: #999;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.close:hover {
+  color: #3e3e3e;
+}
+
+/* Optional: Make modal content responsive on small screens */
+@media (max-width: 480px) {
+  .modal-content {
+    padding: 1.5rem 1rem;
+    font-size: 0.95rem;
+  }
+
+  .modal-content h2 {
+    font-size: 1.5rem;
+  }
+}
